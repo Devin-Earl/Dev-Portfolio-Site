@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout>
+
+    <div class="pb-12 mt-5">
+      <div class="text-xl py-1">Hey there 👋</div>
+      <div class="text-5xl font-bold">I'm Devin Earl</div>
+      <div class="text-3xl py-3 font-bold">Technologist and Entrepreneur</div>
+      <div class="py-2">
+        <text class="text-lg">
+          With over 7 years of comprehensive industry experience, I have a wealth of knowledge in multiple technologies and methodologies. My goal is to bring visions to reality and collaborate with cutting-edge, forward-thinking teams to drive success.
+          </text
+        >
+      </div>
+      <div class="mt-8">
+        <a class="btn" href="https://www.linkedin.com/in/rde0809/" target="_blank"> Let's connect!</a>
+        <a href="mailto:Devin.Earl@devinsight.co" target="_blank" class="btn btn-outline ml-5"> Email Me!</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="text-3xl w-full font-bold mb-2">Recent Freelance Projects {"</>"}</div>
+    </div>
+
+    <HorizontalCard
+      title="Smart Reimbursement"
+      img="/SRI.png"
+      desc="Devin worked hand-in-hand with the team at SRI to streamline the way they manage healthcare data. By seamlessly integrating their exisiting processes and leveraging the cloud, Devin made sure that the team at SRI had quick and easy access to critical information at their fingertips. With Devin's expertise, the team at SRI can now work more efficiently and effectively to deliver the best results for their clients."
+      url="https://smartreimbursement.com/"
+      
+    />
+    <div class="divider my-0"></div>
+    <HorizontalCard
+    title="Truvo"
+    img="/Truvo.webp"
+    desc="Truvo started with a vision to change the managed care industry forever, through transportation services and on-demand care. Devin helped guide the development process by creating a roadmap, providing scoped out development time and budget estimates, and researching competitor platforms to recommend features for a minimum viable product (MVP). Currently, Truvo is in a closed beta phase as they raise their initial funding round."
+    url="https://www.gotruvo.com/"
+  />
+  <div class="divider my-0"></div>
+    <HorizontalCard
+    title="MVMT"
+    img="/MVMT.png"
+    desc="Movement is a cutting-edge marketing consultancy that sets itself apart with its innovative approach. The team takes on challenges with a fearless attitude and turns them into opportunities for success. Devin has been a valued asset, bringing his technical expertise to the table with custom script development for streamlining processes, creating advanced HubSpot automations, and maintaining top-notch cloud infrastructure for high-profile clients."
+    url="https://makemvmt.com/"
+  />
+
+</BaseLayout>

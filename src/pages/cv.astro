@@ -1,0 +1,169 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Robert "Devin" Earl is a highly skilled and motivated professional with a
+    passion for all things technology and specifically loves helping bring ideas
+    to life while finding new and creative ways to encorporate technology. With
+    over 7 years of experience in the field, Devin has a proven track record of
+    success in delivering complex software solutions, managing teams of
+    engineers, and implementing new technologies to increase efficiency and
+    productivity for clients in a variety of industries.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Associate of Arts Information Technology"
+      subtitle="Tarrant County College, Fort Worth, Texas"
+    />
+    <TimeLineElement
+      title="Bachelors of Science Computer Information Systems"
+      subtitle="University of North Texas, Denton, Texas"
+    />
+    <TimeLineElement
+      title="Full Stack Software Engineer Certification"
+      subtitle=""
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="DevInsight"
+      subtitle="2022, Founder/CEO, Nashville, Tennessee"
+      desc="As a technology consultant with 7 years of industry experience, I have a proven track record of success in growing a company from the ground up. I have provided product management services to several small to medium sized businesses and successfully managed multiple teams."
+    />
+   <TimeLineElement
+      title="Product Operations Manager"
+      subtitle="2022, at Knowable (A Child Company of LexisNexis), Remote"
+      desc= "As a Product Ops member, I worked daily with PostgreSQL to set up tables, schemas, and stored procedures for new client environment development and QA testing. I also automated manual processes within the PostgreSQL environment through Node.js scripts and used AWS services to enhance the efficiency and scalability of our custom-developed app. I took ownership of the JIRA environment, setting up automations for environment configuration tickets, bug reports, and feature requests. I also groomed the product board and created user stories, bug tickets, and feature enhancements as needed."
+      />
+  
+    <TimeLineElement
+      title="Application Engineer, Supply Chain Product Development"
+      subtitle="From 2016 to 2021 at HCA Healthcare/HealthTrust Tech Innovations, Nashville, Tennessee"
+      desc="At HCA Healthcare, I managed legacy Supply Chain Applications from both server and client perspectives, ensuring 100% uptime through participation in the 24/7 on-call rotation and resolving escalated customer tickets. I led Root Cause Analysis and Post Mortem processes to improve the WMS, Procurement, AP, and Controlled Disbursement systems. I also designed and developed an RPA automation to streamline manual procurement processes, reducing resource requirements. My expertise played a key role in the successful rollout of Cobots and the transition from Infor WMS to Manhattan WMS in HCA's largest warehouses."
+    />
+    <TimeLineElement
+      title="Product Analyst, Supply Chain Product Development"
+      subtitle="Promotion from Client Support Analyst at HCA Healthcare, Nashville, Tennessee"
+      desc="As a Product Analyst at HCA Healthcare, I was responsible for mentoring my team on software use and best practices while implementing the ITIL model. I collaborated with internal stakeholders to revise existing process flows and develop new operational models, which resulted in an improved user experience. I led multiple projects aimed at automating distribution operations using various applications such as SMART, SMART Procurement, VIRA, HOST AP, Pyxis, and Warehouse Management Systems, optimizing process efficiency. I also used my strong research and troubleshooting skills to resolve procedure and software issues, and utilized SQL queries to read data for incident resolution. My excellent communication skills, both written and verbal, allowed for efficient and effective escalation of issues to engineers when necessary. I also followed change management, critical review, and RCA processes to ensure high-quality service delivery, and tested and reproduced user issues in QA environments."
+    />
+    <TimeLineElement
+    title="Client Support Analyst, Supply Chain Customer Support"
+    subtitle= "Promotion from Associate Client Support Analyst at HCA Healthcare, Nashville, Tennessee "
+    desc= "At HCA Healthcare, I provided Tier 2 support for Supply Chain operations, using a range of tools and technologies to diagnose and resolve issues. I also educated end-users to increase their understanding of policies and procedures, which reduced the number of incidents raised quarter over quarter. I was a key participant in Major Event Response efforts, managing the on-call rotation for the team. I leveraged data analytics tools such as Power BI and Tableau to monitor key metrics, identify trends, and inform recommendations for enhancements and patches, helping to drive continuous improvement in the Supply Chain operations."
+    />
+    <TimeLineElement
+    title="Associate Client Support Analyst, After-Hours Support Tier 1"
+    subtitle= "at HCA Healthcare, Nashville, Tennessee"
+    desc= "As a Service Desk Tier 1 Support Technician at HCA Healthcare, I was responsible for providing prompt and accurate technical support. I answered incoming calls, responded to tickets, emails, and chats and updated customer information. I assisted with resolving technical issues such as password resets, system crashes, and error messages. I monitored and triaged incoming incidents and followed established procedures to ensure timely resolution. I also maintained knowledge of policies and procedures, best practices for customer service, and basic system administration tasks such as account management and software installations. I collaborated with Tier 2 and Tier 3 support teams to escalate and resolve complex issues, and kept customers informed of resolution progress. Additionally, I assisted in maintaining and updating the knowledge base, user guides, and other documentation to ensure accuracy and accessibility for all users."
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      UI Path RPA Associate</a
+      >
+    </li>
+    <li>
+      <a
+      >
+        Scrum Foundation Professional Scrum Master</a
+      >
+    </li>
+    <li>
+      <a
+      >
+        Scrum Foundation Professional Scrum Product Owner</a
+      >
+      <li>
+        <a
+        >
+          Certified Associate Project Manager</a
+        >
+        <li>
+          <a
+          >
+            AWS Certified Sys Ops Admin</a
+          >
+        </li>
+      </li>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills/Exposure</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>JavaScript</li>
+    <li>Postgres SQL</li>
+    <li>T-SQL</li>
+    <li>CSS</li>
+    <li>Amazon RedShift</li>
+    <li>HTML</li>
+    <li>Node.js</li>
+    <li>Astro</li>
+    <li>Bootstrap</li>
+    <li>Postman</li>
+    <li>Wordpress</li>
+    <li>Git</li>
+    <li>Jira</li>
+    <li>Trello</li>
+    <li>Scrum</li>
+    <li>ServiceNow</li>
+    <li>Figma</li>
+    <li>Adobe XD</li>
+    <li>VMWare Vsphere</li>
+    <li>AWS</li>
+    <li>Terraform</li>
+    <li>Circle CI</li>
+    <li>Python</li>
+    <li>Octopus Deploy</li>
+    <li>Docker</li>
+    <li>Selenium</li>
+    <li>Circle CI</li>
+    <li>Netlify</li>
+    <li>UI Path</li>
+    <li>pyautoGUI</li>
+    <li>PagerDuty</li>
+    <li>Cloverleaf</li>
+    <li>Monday</li>
+    <li>VSCode</li>
+    <li>Google Cloud</li>
+    <li>Ansible</li>
+    <li>Omnicell</li>
+    <li>Pyxis</li>
+    <li>Lawson AP</li>
+    <li>SAP</li>
+    <li>Business Objects</li>
+    <li>Oracle Terradata</li>
+    <li>EC2</li>
+    <li>AWS Lambda</li>
+    <li>ElasticSearch</li>
+    <li>Kibana</li>
+    <li>Linux</li>
+    <li>Zsh</li>
+    <li>S3</li>
+    <li>Jupyter Notebook</li>
+  </ul>
+</BaseLayout>

@@ -9,8 +9,8 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIA54IWJK2GYYW7235J"
-  secret_key = "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"
+  access_key = "Key"
+  secret_key = "Key/"
 }
 
 resource "aws_iam_user" "CloudFront" {

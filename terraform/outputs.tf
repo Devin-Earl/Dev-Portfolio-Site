@@ -24,3 +24,8 @@ output "acr_admin_username" {
   description = "Specifies the admin username of the container registry."
   value       = azurerm_container_registry.acr.admin_username
 }
+output "acr_admin_password" {
+    description = "Specifies the admin password of the container registry"
+    value = azurerm_container_registry.acr.admin_password
+    sensitive = true
+}

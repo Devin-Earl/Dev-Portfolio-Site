@@ -11,23 +11,23 @@ terraform {
   }
   
 
-  backend "remote" {
+#   backend "remote" {
 
-    hostname     = "spacelift.io" 
+#     hostname     = "spacelift.io" 
 
-    organization = "devin-earl"    
+#     organization = "devin-earl"    
 
 
 
-    workspaces {
+#     workspaces {
 
-      name = "test-stack" 
+#       name = "test-stack" 
 
-    }
+#     }
 
-  }
+#   }
 
-}
+ }
 
 provider "azurerm" {
    features {}

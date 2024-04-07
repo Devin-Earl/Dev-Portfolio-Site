@@ -29,4 +29,8 @@ output "acr_admin_password" {
     value = azurerm_container_registry.acr.admin_password
     sensitive = true
 }
+output "service_plan_id" {
+  description = "Specifices Azure Service Plan ID"
+  value = azurerm_service_plan.Dev-Resume-Site.id
+}
 

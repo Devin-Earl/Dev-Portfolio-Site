@@ -59,14 +59,12 @@ resource "azurerm_service_plan" "Dev-Resume-Site" {
   location            = azurerm_resource_group.example.location
   os_type             = "Linux"
   sku_name            = "P1v2"
-  reserved = true
 }
 resource "azurerm_linux_web_app" "main" {
   name                = var.azure_app_service_name
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
-  service_plan_id = azurerm_service_plan.id
-
+  service_plan_id = azurerm_service_plan.DevResumeSiteProd.id
   identity {
     type = "SystemAssigned"
   }

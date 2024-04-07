@@ -76,3 +76,7 @@ variable "spacelift_key_secret" {
 #     type = string
   
 # }
+variable "azure_app_service_name" {
+  description = "Name of Azure App Service"
+   nullable = false
+}

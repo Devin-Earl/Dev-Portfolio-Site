@@ -53,3 +53,31 @@ provider "spacelift" {
   api_key_id       = var.spacelift_key_id
   api_key_secret   = var.spacelift_key_secret
 }
+resource "azurerm_service_plan" "Dev-Resume-Site" {
+  name                = "DevResumeSiteProd"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  os_type             = "Linux"
+  sku_name            = "P1v2"
+}
+resource "azurerm_linux_web_app" "main" {
+  name                = var.azure_app_service_name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  service_plan_id = azurerm_service_plan.Dev-Resume-Site.id
+  identity {
+    type = "SystemAssigned"
+  }
+
+  site_config {
+    always_on        = true
+     application_stack {
+    docker_image_name= "dev-portfolio-2:latest"
+    docker_registry_url= "https://${azurerm_container_registry.acr.login_server}"
+    docker_registry_username= azurerm_container_registry.acr.admin_username
+    docker_registry_password= azurerm_container_registry.acr.admin_password
+  }
+    
+  }
+ 
+}
